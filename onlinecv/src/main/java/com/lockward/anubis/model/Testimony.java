@@ -71,12 +71,4 @@ public class Testimony {
 	public void setYearMet(Date yearMet) {
 		this.yearMet = yearMet;
 	}
-
-	@Override
-	public String toString() {
-		return "Testimony [id=" + id + ", posterName=" + posterName + ", posterProfession=" + posterProfession
-				+ ", yearMet=" + yearMet + ", datePosted=" + datePosted + ", testimonyDescription="
-				+ testimonyDescription + "]";
-	}
-
 }

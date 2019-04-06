@@ -1,23 +1,7 @@
-<!-- TODO:
-	-Fix header content to make it more accessible 	
-	-Center all divs inside the all-elements div.
-	-Add icons to collapsible items.
-	-Add the option to change language of the CV from english to spanish and vice versa.
-	-Make CV look cooler by adding themes.
-	-Add section for people to post personal references
-	-Add database support
-	-Create these cards on trello and post there
-
-	DONE:
-	-Add nav bar to the top of the resume that moves between sections.
-	-Add footer
-	-Add social media icons and ways to contact me
-	-Add bootstrap
--->
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
 
 	<meta property="og:title" content="Online Curriculum Vitae">
@@ -292,11 +276,29 @@
 					<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-plus"></i> Add Testimonial</button>
 					<hr>
 				</div>
-				<div class="card mb-3 testimony" th:each="testimony-item : ${testimonies}">
+				<div class="card mb-3 testimony" th:each="testimonyItem : ${testimonies}">
 					<div class="row no-gutters h-100">
 						<div class="d-flex col-md-4 align-items-center">
 							<div class="mx-3">
-								<h5 th:text="${testimony-item.posterName}">[Poster's Name None]</h5>
+								<h5 th:text="${testimonyItem.posterName}">[Poster's Name Templates]</h5>
+								<p th:text="${testimonyItem.posterProfession}">[Profession]</p>
+								<h6 class="how-we-met">We know each other since: <span th:text="${#dates.format(testimonyItem.yearMet, 'yyyy')}">[Year]</span></h6>
+							</div>
+						</div>
+						<div class="d-flex col-md-8 border-left align-items-center">
+							<div class="card-body">
+								<p class="card-text" th:text="${testimonyItem.testimonyDescription}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p class="card-text"><small class="text-muted"><strong>Posted on:</strong> <span th:text="${#dates.format(testimonyItem.datePosted, 'MMM dd, yyyy')}">[date]</span></small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="card mb-3 testimony">
+					<div class="row no-gutters h-100">
+						<div class="d-flex col-md-4 align-items-center">
+							<div class="mx-3">
+								<h5>[Poster's Name]</h5>
 								<p>[Profession]</p>
 								<h6 class="how-we-met">[year] We met on a rainy Sunday under a tree.</h6>
 							</div>
@@ -327,25 +329,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="card mb-3 testimony">
-					<div class="row no-gutters h-100">
-						<div class="d-flex col-md-4 align-items-center">
-							<div class="mx-3">
-								<h5>[Poster's Name]</h5>
-								<p>[Profession]</p>
-								<h6 class="how-we-met">[year] We met on a rainy Sunday under a tree.</h6>
-							</div>
-						</div>
-						<div class="d-flex col-md-8 border-left align-items-center">
-							<div class="card-body">
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua.</p>
-								<p class="card-text"><small class="text-muted"><strong>Posted on:</strong> Feb 21, 2019</small></p>
-							</div>
-						</div>
-					</div>
-				</div>
+				</div> -->
 			</section>
 		</main>
 	</div>
@@ -483,3 +467,20 @@
     </script>
 </body>
 </html>
+
+<!-- TODO:
+	-Fix header content to make it more accessible 	
+	-Center all divs inside the all-elements div.
+	-Add icons to collapsible items.
+	-Add the option to change language of the CV from english to spanish and vice versa.
+	-Make CV look cooler by adding themes.
+	-Add section for people to post personal references
+	-Add database support
+	-Create these cards on trello and post there
+
+	DONE:
+	-Add nav bar to the top of the resume that moves between sections.
+	-Add footer
+	-Add social media icons and ways to contact me
+	-Add bootstrap
+-->

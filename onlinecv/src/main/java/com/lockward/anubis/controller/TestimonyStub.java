@@ -29,7 +29,7 @@ public class TestimonyStub {
 	}
 
 	public static Testimony save(Testimony testimony) {
-		idIndex++;
+		idIndex += idIndex;
 		testimony.setId(idIndex);
 		testimonies.put(idIndex, testimony);
 		return testimony;
