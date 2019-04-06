@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
-Implementation-Title: form-submit
+Implementation-Title: onlinecv
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Lenovo
-Implementation-Vendor-Id: net.gbm
+Implementation-Vendor-Id: com.lockward.anubis
 Build-Jdk: 1.8.0_201
 Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
